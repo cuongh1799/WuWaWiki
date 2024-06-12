@@ -54,7 +54,7 @@
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100.000008F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(1140, 579);
+            tableLayoutPanel1.Size = new Size(1138, 579);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -63,8 +63,8 @@
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(112, 3);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1025, 573);
-            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox1.Size = new Size(1023, 573);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -85,22 +85,24 @@
             ChangliSelect.TabIndex = 0;
             ChangliSelect.Text = "Changli";
             ChangliSelect.UseVisualStyleBackColor = true;
+            ChangliSelect.Click += ChangliSelect_Click;
             // 
             // JinhsiSelect
             // 
             JinhsiSelect.Location = new Point(3, 69);
             JinhsiSelect.Name = "JinhsiSelect";
-            JinhsiSelect.Size = new Size(96, 67);
+            JinhsiSelect.Size = new Size(100, 67);
             JinhsiSelect.TabIndex = 1;
             JinhsiSelect.Text = "Jinhsi";
             JinhsiSelect.UseVisualStyleBackColor = true;
+            JinhsiSelect.Click += JinhsiSelect_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1140, 579);
+            ClientSize = new Size(1138, 579);
             Controls.Add(tableLayoutPanel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
@@ -108,7 +110,6 @@
             Name = "Form1";
             Text = "Changli/Reborn";
             tableLayoutPanel1.ResumeLayout(false);
-            tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             flowLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
