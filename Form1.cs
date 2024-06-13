@@ -17,14 +17,44 @@ namespace ChangliReborn
 
         private void JinhsiSelect_Click(object sender, EventArgs e)
         {
+            if (pictureBox1.Visible == false)
+            {
+                pictureBox1.Visible = true;
+            }
             pictureBox1.Image = JinhsiBMP;
+            flowLayoutPanel1.BackColor = Color.DarkCyan;
             //pictureBox1.Load(JinhsiFilePath);
         }
 
         private void ChangliSelect_Click(object sender, EventArgs e)
         {
+            if (pictureBox1.Visible == false)
+            {
+                pictureBox1.Visible = true;
+            }
             pictureBox1.Image = ChangliBMP;
+            flowLayoutPanel1.BackColor = Color.DarkRed;
             //pictureBox1.Load(ChangliFilePath);
+        }
+
+        private void JinhsiIconSide_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Visible == false)
+            {
+                pictureBox1.Visible = true;
+            }
+            pictureBox1.Image = JinhsiBMP;
+            flowLayoutPanel1.BackColor = Color.DarkCyan;
+        }
+
+        private void ChangliIconSide_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Visible == false)
+            {
+                pictureBox1.Visible = true;
+            }
+            pictureBox1.Image = ChangliBMP;
+            flowLayoutPanel1.BackColor = Color.DarkRed;
         }
     }
 }
