@@ -23,7 +23,7 @@ namespace ChangliReborn
                 pictureBox1.Visible = true;
             }
             pictureBox1.Image = JinhsiBMP;
-            SideBar.BackColor = Color.DarkCyan;
+            //SideBar.BackColor = Color.DarkCyan;
             //pictureBox1.Load(JinhsiFilePath);
         }
 
@@ -34,7 +34,7 @@ namespace ChangliReborn
                 pictureBox1.Visible = true;
             }
             pictureBox1.Image = ChangliBMP;
-            SideBar.BackColor = Color.DarkRed;
+            //SideBar.BackColor = Color.DarkRed;
             //pictureBox1.Load(ChangliFilePath);
         }
 
@@ -45,7 +45,7 @@ namespace ChangliReborn
                 pictureBox1.Visible = true;
             }
             pictureBox1.Image = JinhsiBMP;
-            SideBar.BackColor = Color.DarkCyan;
+            //SideBar.BackColor = Color.DarkCyan;
         }
 
         private void ChangliIconSide_Click(object sender, EventArgs e)
@@ -55,27 +55,14 @@ namespace ChangliReborn
                 pictureBox1.Visible = true;
             }
             pictureBox1.Image = ChangliBMP;
-            SideBar.BackColor = Color.DarkRed;
+            //SideBar.BackColor = Color.DarkRed;
         }
 
         private void SideBarCollapseButton_Click(object sender, EventArgs e)
         {
-            // Collapse the Sidebar
+            // Expand the Sidebar
             // Hide the buttonSelect of the characters
             if (sidebarCollapse == true)
-            {
-                ChangliIconSide.Visible = false;
-                JinhsiIconSide.Visible = false;
-
-                ChangliSelect.Visible = true;
-                JinhsiSelect.Visible = true;
-
-                SideBar.Width = 286;
-                sidebarCollapse = false;
-            }
-            // Expand the Sidebar
-            // Hide the characterIcon
-            else if (sidebarCollapse == false)
             {
                 ChangliIconSide.Visible = true;
                 JinhsiIconSide.Visible = true;
@@ -83,8 +70,43 @@ namespace ChangliReborn
                 ChangliSelect.Visible = false;
                 JinhsiSelect.Visible = false;
 
-                SideBar.Width = 90;
+                //SideBar.Width = 286;
+                timer1.Start();
+                sidebarCollapse = false;
+            }
+            // Collapse the Sidebar
+            // Hide the characterIcon
+            else if (sidebarCollapse == false)
+            {
+                ChangliIconSide.Visible = false;
+                JinhsiIconSide.Visible = false;
+
+                ChangliSelect.Visible = true;
+                JinhsiSelect.Visible = true;
+
+                //SideBar.Width = 90;
+                timer1.Start();
                 sidebarCollapse = true;
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (sidebarCollapse == true)
+            {
+                SideBar.Width += 14;
+                if (SideBar.Width >= 330)
+                {
+                    timer1.Stop();
+                }
+            }
+            else if (sidebarCollapse == false)
+            {
+                SideBar.Width -= 14;
+                if (SideBar.Width <= 110)
+                {
+                    timer1.Stop();
+                }
             }
         }
     }
