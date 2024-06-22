@@ -109,5 +109,22 @@ namespace ChangliReborn
                 }
             }
         }
+
+        private void BuildButton_Click(object sender, EventArgs e)
+        {
+            if (panel1.Visible == true)
+            {
+                panel1.Visible = false;
+            }
+            else if (panel1.Visible == false)
+            {
+                panel1.Visible = true;
+            }
+        }
+
+        private void MaterialButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
