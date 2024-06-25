@@ -158,22 +158,22 @@ namespace ChangliReborn
 
         private void BuildButton_Click(object sender, EventArgs e)
         {
-            if (BuildPanel.Visible == true)
+            if (MaterialPanel.Visible == true)
             {
-                BuildPanel.Visible = false;
+                MaterialPanel.Visible = false;
             }
-            else if (BuildPanel.Visible == false)
+            else if (MaterialPanel.Visible == false)
             {
-                BuildPanel.Visible = true;
+                MaterialPanel.Visible = true;
                 switch (characterCursor)
                 {
                     case "Changli":
-                        BuildPanel.Clear();
-                        BuildPanel.AppendText(Changli.returnInfoString());
+                        MaterialPanel.Clear();
+                        MaterialPanel.AppendText(Changli.returnInfoString());
                         break;
                     case "Jinhsi":
-                        BuildPanel.Clear();
-                        BuildPanel.AppendText(Jinhsi.returnInfoString());
+                        MaterialPanel.Clear();
+                        MaterialPanel.AppendText(Jinhsi.returnInfoString());
                         break;
                 }
             }

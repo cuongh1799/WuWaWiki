@@ -39,9 +39,9 @@
             pictureBox1 = new PictureBox();
             timer1 = new System.Windows.Forms.Timer(components);
             flowLayoutPanel1 = new FlowLayoutPanel();
-            BuildButton = new Button();
             MaterialButton = new Button();
-            BuildPanel = new RichTextBox();
+            BuildButton = new Button();
+            MaterialPanel = new RichTextBox();
             SideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)SideBarCollapseButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)JinhsiIconSide).BeginInit();
@@ -147,42 +147,42 @@
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.Controls.Add(BuildButton);
             flowLayoutPanel1.Controls.Add(MaterialButton);
+            flowLayoutPanel1.Controls.Add(BuildButton);
             flowLayoutPanel1.Location = new Point(337, 619);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(803, 100);
             flowLayoutPanel1.TabIndex = 2;
             // 
-            // BuildButton
-            // 
-            BuildButton.Location = new Point(3, 3);
-            BuildButton.Name = "BuildButton";
-            BuildButton.Size = new Size(392, 97);
-            BuildButton.TabIndex = 0;
-            BuildButton.Text = "Build";
-            BuildButton.UseVisualStyleBackColor = true;
-            BuildButton.Click += BuildButton_Click;
-            // 
             // MaterialButton
             // 
-            MaterialButton.Location = new Point(401, 3);
+            MaterialButton.Location = new Point(3, 3);
             MaterialButton.Name = "MaterialButton";
-            MaterialButton.Size = new Size(398, 97);
-            MaterialButton.TabIndex = 1;
-            MaterialButton.Text = "Materials";
+            MaterialButton.Size = new Size(392, 97);
+            MaterialButton.TabIndex = 0;
+            MaterialButton.Text = "Material";
             MaterialButton.UseVisualStyleBackColor = true;
-            MaterialButton.Click += MaterialButton_Click;
+            MaterialButton.Click += BuildButton_Click;
             // 
-            // BuildPanel
+            // BuildButton
             // 
-            BuildPanel.Location = new Point(391, 26);
-            BuildPanel.Name = "BuildPanel";
-            BuildPanel.ReadOnly = true;
-            BuildPanel.Size = new Size(704, 561);
-            BuildPanel.TabIndex = 3;
-            BuildPanel.Text = "";
-            BuildPanel.Visible = false;
+            BuildButton.Location = new Point(401, 3);
+            BuildButton.Name = "BuildButton";
+            BuildButton.Size = new Size(398, 97);
+            BuildButton.TabIndex = 1;
+            BuildButton.Text = "Build";
+            BuildButton.UseVisualStyleBackColor = true;
+            BuildButton.Click += MaterialButton_Click;
+            // 
+            // MaterialPanel
+            // 
+            MaterialPanel.Location = new Point(391, 26);
+            MaterialPanel.Name = "MaterialPanel";
+            MaterialPanel.ReadOnly = true;
+            MaterialPanel.Size = new Size(704, 561);
+            MaterialPanel.TabIndex = 3;
+            MaterialPanel.Text = "";
+            MaterialPanel.Visible = false;
             // 
             // Form1
             // 
@@ -191,7 +191,7 @@
             BackColor = Color.White;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1140, 719);
-            Controls.Add(BuildPanel);
+            Controls.Add(MaterialPanel);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(pictureBox1);
             Controls.Add(SideBar);
@@ -222,8 +222,8 @@
         private PictureBox SideBarCollapseButton;
         private System.Windows.Forms.Timer timer1;
         private FlowLayoutPanel flowLayoutPanel1;
-        private Button BuildButton;
         private Button MaterialButton;
-        private RichTextBox BuildPanel;
+        private Button BuildButton;
+        private RichTextBox MaterialPanel;
     }
 }
