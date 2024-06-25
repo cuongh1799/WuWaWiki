@@ -178,6 +178,7 @@
             // 
             BuildPanel.Location = new Point(391, 26);
             BuildPanel.Name = "BuildPanel";
+            BuildPanel.ReadOnly = true;
             BuildPanel.Size = new Size(704, 561);
             BuildPanel.TabIndex = 3;
             BuildPanel.Text = "";
