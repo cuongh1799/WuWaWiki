@@ -41,7 +41,7 @@
             flowLayoutPanel1 = new FlowLayoutPanel();
             BuildButton = new Button();
             MaterialButton = new Button();
-            panel1 = new Panel();
+            BuildPanel = new RichTextBox();
             SideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)SideBarCollapseButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)JinhsiIconSide).BeginInit();
@@ -174,14 +174,14 @@
             MaterialButton.UseVisualStyleBackColor = true;
             MaterialButton.Click += MaterialButton_Click;
             // 
-            // panel1
+            // BuildPanel
             // 
-            panel1.BackColor = Color.FromArgb(125, 0, 0, 0);
-            panel1.Location = new Point(337, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(803, 614);
-            panel1.TabIndex = 3;
-            panel1.Visible = false;
+            BuildPanel.Location = new Point(391, 26);
+            BuildPanel.Name = "BuildPanel";
+            BuildPanel.Size = new Size(704, 561);
+            BuildPanel.TabIndex = 3;
+            BuildPanel.Text = "";
+            BuildPanel.Visible = false;
             // 
             // Form1
             // 
@@ -190,7 +190,7 @@
             BackColor = Color.White;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1140, 719);
-            Controls.Add(panel1);
+            Controls.Add(BuildPanel);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(pictureBox1);
             Controls.Add(SideBar);
@@ -223,6 +223,6 @@
         private FlowLayoutPanel flowLayoutPanel1;
         private Button BuildButton;
         private Button MaterialButton;
-        private Panel panel1;
+        private RichTextBox BuildPanel;
     }
 }

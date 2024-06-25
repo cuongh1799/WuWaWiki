@@ -1,3 +1,5 @@
+using System.Text.Json;
+
 namespace ChangliReborn
 {
     public partial class Form1 : Form
@@ -11,9 +13,49 @@ namespace ChangliReborn
         Bitmap JinhsiBMP = new Bitmap("..\\..\\..\\assets\\CharacterBanner\\JinhsiBanner.jpg");
         Bitmap ChangliBMP = new Bitmap("..\\..\\..\\assets\\CharacterBanner\\ChangliBanner.jpeg");
         Boolean sidebarCollapse = false;
+        string characterCursor = new string("");
+
+        /*
+            JSON SERIALIZATION AND DESERIALIZATION FOR FETCHING CHARACTER DATA
+        */
+        //var options = new JsonSerializerOptions { WriteIndented = true };
+
+        public static string ChangliJSON = File.ReadAllText("..\\..\\..\\assets\\CharacterMaterial\\ChangliMaterial.json");
+        public static string JinhsiJSON = File.ReadAllText("..\\..\\..\\assets\\CharacterMaterial\\JinhsiMaterial.json");
+        Character Changli = JsonSerializer.Deserialize<Character>(ChangliJSON);
+        Character Jinhsi = JsonSerializer.Deserialize<Character>(JinhsiJSON);
+
         public Form1()
         {
             InitializeComponent();
+        }
+
+        public class Character
+        {
+            public string Name { get; set; } = "Not set"; // Using auto-implemented property
+            public Dictionary<string, int> Material { get; set; } = new Dictionary<string, int>();
+
+            public void setName(string input)
+            {
+                this.Name = input;
+            }
+            public void addMaterial(string Input, int Amount)
+            {
+                Material.Add(Input, Amount);
+            }
+            public string returnInfoString()
+            {
+                string result = new string("");
+                result += Name + "\n" + "Material list: \n";
+                System.Console.WriteLine(Name);
+                System.Console.WriteLine("Material list:");
+                foreach (KeyValuePair<string, int> kvp in Material)
+                {
+                    System.Console.WriteLine("- " + kvp.Key + ", amount: " + kvp.Value);
+                    result += "- " + kvp.Key + ", amount: " + kvp.Value + "\n";
+                }
+                return result;
+            }
         }
 
         private void JinhsiSelect_Click(object sender, EventArgs e)
@@ -25,6 +67,7 @@ namespace ChangliReborn
             pictureBox1.Image = JinhsiBMP;
             //SideBar.BackColor = Color.DarkCyan;
             //pictureBox1.Load(JinhsiFilePath);
+            characterCursor = "Jinhsi";
         }
 
         private void ChangliSelect_Click(object sender, EventArgs e)
@@ -36,6 +79,7 @@ namespace ChangliReborn
             pictureBox1.Image = ChangliBMP;
             //SideBar.BackColor = Color.DarkRed;
             //pictureBox1.Load(ChangliFilePath);
+            characterCursor = "Changli";
         }
 
         private void JinhsiIconSide_Click(object sender, EventArgs e)
@@ -46,6 +90,7 @@ namespace ChangliReborn
             }
             pictureBox1.Image = JinhsiBMP;
             //SideBar.BackColor = Color.DarkCyan;
+            characterCursor = "Jinhsi";
         }
 
         private void ChangliIconSide_Click(object sender, EventArgs e)
@@ -56,6 +101,7 @@ namespace ChangliReborn
             }
             pictureBox1.Image = ChangliBMP;
             //SideBar.BackColor = Color.DarkRed;
+            characterCursor = "Changli";
         }
 
         private void SideBarCollapseButton_Click(object sender, EventArgs e)
@@ -112,13 +158,24 @@ namespace ChangliReborn
 
         private void BuildButton_Click(object sender, EventArgs e)
         {
-            if (panel1.Visible == true)
+            if (BuildPanel.Visible == true)
             {
-                panel1.Visible = false;
+                BuildPanel.Visible = false;
             }
-            else if (panel1.Visible == false)
+            else if (BuildPanel.Visible == false)
             {
-                panel1.Visible = true;
+                BuildPanel.Visible = true;
+                switch (characterCursor)
+                {
+                    case "Changli":
+                        BuildPanel.Clear();
+                        BuildPanel.AppendText(Changli.returnInfoString());
+                        break;
+                    case "Jinhsi":
+                        BuildPanel.Clear();
+                        BuildPanel.AppendText(Jinhsi.returnInfoString());
+                        break;
+                }
             }
         }
 
