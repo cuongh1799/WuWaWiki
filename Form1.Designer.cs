@@ -176,6 +176,7 @@
             // 
             // MaterialPanel
             // 
+            MaterialPanel.Font = new Font("Segoe UI", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             MaterialPanel.Location = new Point(391, 26);
             MaterialPanel.Name = "MaterialPanel";
             MaterialPanel.ReadOnly = true;

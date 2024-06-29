@@ -57,13 +57,17 @@ namespace ChangliReborn
                 return result;
             }
         }
-
-        private void JinhsiSelect_Click(object sender, EventArgs e)
+        private void OnOffPictureBox1()
         {
             if (pictureBox1.Visible == false)
             {
                 pictureBox1.Visible = true;
             }
+        }
+
+        private void JinhsiSelect_Click(object sender, EventArgs e)
+        {
+            OnOffPictureBox1();
             pictureBox1.Image = JinhsiBMP;
             //SideBar.BackColor = Color.DarkCyan;
             //pictureBox1.Load(JinhsiFilePath);
@@ -72,10 +76,7 @@ namespace ChangliReborn
 
         private void ChangliSelect_Click(object sender, EventArgs e)
         {
-            if (pictureBox1.Visible == false)
-            {
-                pictureBox1.Visible = true;
-            }
+            OnOffPictureBox1();
             pictureBox1.Image = ChangliBMP;
             //SideBar.BackColor = Color.DarkRed;
             //pictureBox1.Load(ChangliFilePath);
@@ -84,10 +85,7 @@ namespace ChangliReborn
 
         private void JinhsiIconSide_Click(object sender, EventArgs e)
         {
-            if (pictureBox1.Visible == false)
-            {
-                pictureBox1.Visible = true;
-            }
+            OnOffPictureBox1();
             pictureBox1.Image = JinhsiBMP;
             //SideBar.BackColor = Color.DarkCyan;
             characterCursor = "Jinhsi";
@@ -95,10 +93,7 @@ namespace ChangliReborn
 
         private void ChangliIconSide_Click(object sender, EventArgs e)
         {
-            if (pictureBox1.Visible == false)
-            {
-                pictureBox1.Visible = true;
-            }
+            OnOffPictureBox1();
             pictureBox1.Image = ChangliBMP;
             //SideBar.BackColor = Color.DarkRed;
             characterCursor = "Changli";
