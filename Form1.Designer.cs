@@ -30,7 +30,6 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            SideBar = new FlowLayoutPanel();
             SideBarCollapseButton = new PictureBox();
             JinhsiIconSide = new PictureBox();
             ChangliIconSide = new PictureBox();
@@ -42,33 +41,22 @@
             MaterialButton = new Button();
             BuildButton = new Button();
             MaterialPanel = new RichTextBox();
-            SideBar.SuspendLayout();
+            vScrollBar1 = new VScrollBar();
+            panel1 = new Panel();
+            addCharacterButton = new Button();
             ((System.ComponentModel.ISupportInitialize)SideBarCollapseButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)JinhsiIconSide).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ChangliIconSide).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             flowLayoutPanel1.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // SideBar
-            // 
-            SideBar.BackColor = Color.WhiteSmoke;
-            SideBar.Controls.Add(SideBarCollapseButton);
-            SideBar.Controls.Add(JinhsiIconSide);
-            SideBar.Controls.Add(ChangliIconSide);
-            SideBar.Controls.Add(ChangliSelect);
-            SideBar.Controls.Add(JinhsiSelect);
-            SideBar.Dock = DockStyle.Left;
-            SideBar.Location = new Point(0, 0);
-            SideBar.Name = "SideBar";
-            SideBar.Size = new Size(341, 719);
-            SideBar.TabIndex = 0;
             // 
             // SideBarCollapseButton
             // 
             SideBarCollapseButton.Cursor = Cursors.Hand;
             SideBarCollapseButton.Image = (Image)resources.GetObject("SideBarCollapseButton.Image");
-            SideBarCollapseButton.Location = new Point(3, 3);
+            SideBarCollapseButton.Location = new Point(340, 344);
             SideBarCollapseButton.Name = "SideBarCollapseButton";
             SideBarCollapseButton.Size = new Size(90, 90);
             SideBarCollapseButton.SizeMode = PictureBoxSizeMode.Zoom;
@@ -82,7 +70,7 @@
             JinhsiIconSide.BorderStyle = BorderStyle.FixedSingle;
             JinhsiIconSide.Cursor = Cursors.Hand;
             JinhsiIconSide.Image = (Image)resources.GetObject("JinhsiIconSide.Image");
-            JinhsiIconSide.Location = new Point(99, 3);
+            JinhsiIconSide.Location = new Point(337, 235);
             JinhsiIconSide.Name = "JinhsiIconSide";
             JinhsiIconSide.Size = new Size(90, 90);
             JinhsiIconSide.SizeMode = PictureBoxSizeMode.Zoom;
@@ -98,7 +86,7 @@
             ChangliIconSide.BorderStyle = BorderStyle.FixedSingle;
             ChangliIconSide.Cursor = Cursors.Hand;
             ChangliIconSide.Image = (Image)resources.GetObject("ChangliIconSide.Image");
-            ChangliIconSide.Location = new Point(195, 3);
+            ChangliIconSide.Location = new Point(340, 130);
             ChangliIconSide.Name = "ChangliIconSide";
             ChangliIconSide.Size = new Size(90, 90);
             ChangliIconSide.SizeMode = PictureBoxSizeMode.Zoom;
@@ -110,9 +98,9 @@
             // ChangliSelect
             // 
             ChangliSelect.Image = (Image)resources.GetObject("ChangliSelect.Image");
-            ChangliSelect.Location = new Point(3, 99);
+            ChangliSelect.Location = new Point(0, 141);
             ChangliSelect.Name = "ChangliSelect";
-            ChangliSelect.Size = new Size(338, 90);
+            ChangliSelect.Size = new Size(293, 79);
             ChangliSelect.TabIndex = 0;
             ChangliSelect.UseVisualStyleBackColor = true;
             ChangliSelect.Click += ChangliSelect_Click;
@@ -120,9 +108,9 @@
             // JinhsiSelect
             // 
             JinhsiSelect.Image = (Image)resources.GetObject("JinhsiSelect.Image");
-            JinhsiSelect.Location = new Point(3, 195);
+            JinhsiSelect.Location = new Point(0, 226);
             JinhsiSelect.Name = "JinhsiSelect";
-            JinhsiSelect.Size = new Size(338, 90);
+            JinhsiSelect.Size = new Size(293, 67);
             JinhsiSelect.TabIndex = 1;
             JinhsiSelect.Text = "Jinhsi";
             JinhsiSelect.UseVisualStyleBackColor = true;
@@ -132,9 +120,9 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.BackgroundImageLayout = ImageLayout.None;
-            pictureBox1.Location = new Point(337, 2);
+            pictureBox1.Location = new Point(519, 22);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(803, 615);
+            pictureBox1.Size = new Size(385, 421);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -172,49 +160,77 @@
             BuildButton.TabIndex = 1;
             BuildButton.Text = "Build";
             BuildButton.UseVisualStyleBackColor = true;
-            BuildButton.Click += MaterialButton_Click;
             // 
             // MaterialPanel
             // 
             MaterialPanel.Font = new Font("Segoe UI", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            MaterialPanel.Location = new Point(391, 26);
+            MaterialPanel.Location = new Point(641, 22);
             MaterialPanel.Name = "MaterialPanel";
             MaterialPanel.ReadOnly = true;
-            MaterialPanel.Size = new Size(704, 561);
+            MaterialPanel.Size = new Size(487, 355);
             MaterialPanel.TabIndex = 3;
             MaterialPanel.Text = "";
             MaterialPanel.Visible = false;
+            // 
+            // vScrollBar1
+            // 
+            vScrollBar1.Location = new Point(309, 12);
+            vScrollBar1.Name = "vScrollBar1";
+            vScrollBar1.Size = new Size(25, 701);
+            vScrollBar1.TabIndex = 5;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(addCharacterButton);
+            panel1.Controls.Add(ChangliSelect);
+            panel1.Controls.Add(JinhsiSelect);
+            panel1.Location = new Point(10, 9);
+            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(296, 701);
+            panel1.TabIndex = 6;
+            // 
+            // addCharacterButton
+            // 
+            addCharacterButton.Location = new Point(3, 13);
+            addCharacterButton.Name = "addCharacterButton";
+            addCharacterButton.Size = new Size(290, 62);
+            addCharacterButton.TabIndex = 7;
+            addCharacterButton.Text = "Add Character";
+            addCharacterButton.UseVisualStyleBackColor = true;
+            addCharacterButton.Click += addCharacterButton_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1140, 719);
+            Controls.Add(panel1);
+            Controls.Add(vScrollBar1);
+            Controls.Add(SideBarCollapseButton);
             Controls.Add(MaterialPanel);
+            Controls.Add(JinhsiIconSide);
             Controls.Add(flowLayoutPanel1);
+            Controls.Add(ChangliIconSide);
             Controls.Add(pictureBox1);
-            Controls.Add(SideBar);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
-            MinimumSize = new Size(1156, 758);
+            MinimumSize = new Size(1156, 756);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Changli/Reborn";
-            SideBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)SideBarCollapseButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)JinhsiIconSide).EndInit();
             ((System.ComponentModel.ISupportInitialize)ChangliIconSide).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             flowLayoutPanel1.ResumeLayout(false);
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
-
-        private FlowLayoutPanel SideBar;
         private Button ChangliSelect;
         private PictureBox pictureBox1;
         private Button JinhsiSelect;
@@ -226,5 +242,8 @@
         private Button MaterialButton;
         private Button BuildButton;
         private RichTextBox MaterialPanel;
+        private VScrollBar vScrollBar1;
+        private Panel panel1;
+        private Button addCharacterButton;
     }
 }
