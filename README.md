@@ -1,5 +1,7 @@
 # Project::Changli/Reborn
-## You will need Visual Studio with C# Development Pack to run this project
+# IMPORTANT: A NEW BACKEND SYSTEM IS BEING DEVELOP IN THE `new-backend-system` BRANCH
+
+## You will need Visual Studio with .NET pack to run this project
 This project is still in the works, however this is some expected images of the app:
 
 Demonstration:
