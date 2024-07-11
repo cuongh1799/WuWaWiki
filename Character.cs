@@ -8,17 +8,29 @@ namespace ChangliReborn
 {
     public class Character
     {
-        public Character(String nameInput, String materialInput, string classMaterialInput, String bossMaterialinput, String skillMatInput) {
+        public Character(
+                        String nameInput, 
+                        String materialInput, 
+                        string classMaterialInput, 
+                        String bossMaterialinput, 
+                        String skillMatInput,
+                        String charBannerURl,
+                        String charIconURL) 
+        {
             Name = nameInput;
             //MaterialType = materialInput;
             ClassMaterialType = classMaterialInput;
             BossMaterialType = bossMaterialinput;
             addMaterial(materialInput, skillMatInput);
+            CharBannerURL = charBannerURl;
+            CharIconURL = charIconURL;
         }
 
         public string Name { get; set; } = "Not set"; // Using auto-implemented property
         public string ClassMaterialType { get; set; } = "Not set";
         public string BossMaterialType { get; set; } = "Not set";
+        public string CharBannerURL { get; set; } = "Not set";
+        public string CharIconURL{ get; set; } = "Not set";
         public Dictionary<string, int> Material { get; set; } = new Dictionary<string, int>();
 
         public void setName(string input)

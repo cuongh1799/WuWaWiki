@@ -15,6 +15,10 @@ namespace ChangliReborn
 {
     public partial class AddCharacterForm : Form
     {
+        const string materialPath = "..\\..\\..\\assets\\CharacterMaterial";
+        const string bannerPath = "..\\..\\..\\assets\\CharacterBanner";
+        const string bannerIcon = "..\\..\\..\\assets\\CharacterIcon";
+
         public AddCharacterForm()
         {
             InitializeComponent();
@@ -38,14 +42,15 @@ namespace ChangliReborn
 
         private void AddCharacterJSON_Click(object sender, EventArgs e)
         {
-            var materialPath = "..\\..\\..\\assets\\CharacterBanner";
             Character newchar = new Character
                 (
                     InputCharacterName.Text, 
                     AscensionMatInput.Text, 
                     ClassMatNameInput.Text, 
                     BossMatInput.Text,
-                    SkillMatInput.Text
+                    SkillMatInput.Text, 
+                    CharBannerURL.Text, 
+                    CharIconURL.Text
                 );
             var options = new JsonSerializerOptions
             {
@@ -55,7 +60,24 @@ namespace ChangliReborn
             
             // Need Directory.Move because it create in Debug folder
             File.WriteAllText(newchar.Name + ".json", serialString);
+
+            if(File.Exists(materialPath + "\\" + newchar.Name + ".json"))
+            {
+                File.Delete(materialPath + "\\" + newchar.Name + ".json");
+            }
+
             Directory.Move(newchar.Name + ".json", materialPath + "\\" + newchar.Name + ".json");
+            AddSuccessScreen successScreen = new AddSuccessScreen();
+            successScreen.ShowDialog();
+
+            /*
+                NEW ISSUE: THE URL ON BOTH BANNER AND ICON IS FULL DIRECTORY
+                WHICH MEANS ON OTHER PC IT WILL BE FUCKED
+            */
+
+            //Directory.Move(CharBannerURL.Text, materialPath + "\\" + newchar.Name + ".json");
+
+
         }
     }
 }

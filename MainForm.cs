@@ -2,7 +2,7 @@ using System.Text.Json;
 
 namespace ChangliReborn
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         //string JinhsiFilePath = "..\\..\\..\\assets\\CharacterBanner\\JinhsiBanner.jpg";
         //string ChangliFilePath = "..\\..\\..\\assets\\CharacterBanner\\ChangliBanner.jpeg";
@@ -25,7 +25,7 @@ namespace ChangliReborn
         //Character Changli = JsonSerializer.Deserialize<Character>(ChangliJSON);
         //Character Jinhsi = JsonSerializer.Deserialize<Character>(JinhsiJSON);
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
