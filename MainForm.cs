@@ -1,15 +1,10 @@
+using System.Numerics;
 using System.Text.Json;
 
 namespace ChangliReborn
 {
     public partial class MainForm : Form
     {
-        //string JinhsiFilePath = "..\\..\\..\\assets\\CharacterBanner\\JinhsiBanner.jpg";
-        //string ChangliFilePath = "..\\..\\..\\assets\\CharacterBanner\\ChangliBanner.jpeg";
-
-        /*
-        Trying to cache the image file to bitmap first so later on we don't need to convert it again 
-        */
         Bitmap JinhsiBMP = new Bitmap("..\\..\\..\\assets\\CharacterBanner\\JinhsiBanner.jpg");
         Bitmap ChangliBMP = new Bitmap("..\\..\\..\\assets\\CharacterBanner\\ChangliBanner.jpeg");
         Boolean sidebarCollapse = false;
@@ -25,8 +20,29 @@ namespace ChangliReborn
         //Character Changli = JsonSerializer.Deserialize<Character>(ChangliJSON);
         //Character Jinhsi = JsonSerializer.Deserialize<Character>(JinhsiJSON);
 
+        // Cache character list
+        List<Character> CharacterList;
+        private List<Character> LoadCharacter()
+        {
+            DirectoryInfo charBannerDir = new DirectoryInfo("..\\..\\..\\assets\\CharacterMaterial\\");
+            FileInfo[] files = charBannerDir.GetFiles("*.json"); // Assuming JSON files
+            List<Character> CharacterList = new List<Character>();
+
+            foreach (FileInfo file in files)
+            {
+                string jsonString = File.ReadAllText(file.FullName);
+                Character character = JsonSerializer.Deserialize<Character>(jsonString);
+                if (character != null)
+                {
+                    CharacterList.Add(character);
+                }
+            }
+            return CharacterList;
+        }
+
         public MainForm()
         {
+            CharacterList = LoadCharacter();
             InitializeComponent();
         }
 

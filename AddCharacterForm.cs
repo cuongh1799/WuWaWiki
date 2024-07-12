@@ -52,16 +52,26 @@ namespace ChangliReborn
                     CharBannerURL.Text, 
                     CharIconURL.Text
                 );
-            var options = new JsonSerializerOptions
-            {
-                WriteIndented = true
-            };
+            /*
+                NEW ISSUE: THE URL ON BOTH BANNER AND ICON IS FULL DIRECTORY
+                WHICH MEANS ON OTHER PC IT WILL BE FUCKED
+            */
+
+            // Case 1: User choose file from "Download"
+            // We probably need to check if exist first then move + rename 
+
+            // Case 2: User choose file from the folder itself for some reason
+            // Need to check if file exist or not
+
+
+            var options = new JsonSerializerOptions{ WriteIndented = true };
             string serialString = JsonSerializer.Serialize( newchar, options );
             
             // Need Directory.Move because it create in Debug folder
             File.WriteAllText(newchar.Name + ".json", serialString);
 
-            if(File.Exists(materialPath + "\\" + newchar.Name + ".json"))
+
+            if (File.Exists(materialPath + "\\" + newchar.Name + ".json"))
             {
                 File.Delete(materialPath + "\\" + newchar.Name + ".json");
             }
@@ -69,15 +79,6 @@ namespace ChangliReborn
             Directory.Move(newchar.Name + ".json", materialPath + "\\" + newchar.Name + ".json");
             AddSuccessScreen successScreen = new AddSuccessScreen();
             successScreen.ShowDialog();
-
-            /*
-                NEW ISSUE: THE URL ON BOTH BANNER AND ICON IS FULL DIRECTORY
-                WHICH MEANS ON OTHER PC IT WILL BE FUCKED
-            */
-
-            //Directory.Move(CharBannerURL.Text, materialPath + "\\" + newchar.Name + ".json");
-
-
         }
     }
 }

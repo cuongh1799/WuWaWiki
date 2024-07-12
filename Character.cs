@@ -8,6 +8,7 @@ namespace ChangliReborn
 {
     public class Character
     {
+        public Character() { }
         public Character(
                         String nameInput, 
                         String materialInput, 
