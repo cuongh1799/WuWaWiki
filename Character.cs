@@ -66,6 +66,8 @@ namespace ChangliReborn
             }
             System.Console.WriteLine("- " + ClassMaterialType + ", amount: " + 46);
             System.Console.WriteLine("- " + BossMaterialType + ", amount: " + 26);
+            System.Console.WriteLine("CharBannerURL: " + CharBannerURL);
+            System.Console.WriteLine("CharIconURL: " + CharIconURL);
             return result;
         }
     }

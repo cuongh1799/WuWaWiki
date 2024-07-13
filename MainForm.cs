@@ -1,4 +1,5 @@
 using System.Numerics;
+using System.Runtime.CompilerServices;
 using System.Text.Json;
 
 namespace ChangliReborn
@@ -40,99 +41,24 @@ namespace ChangliReborn
             return CharacterList;
         }
 
+        private void LoadSidebar(List<Character> CharacterList)
+        {
+            for(int i = 0; i < CharacterList.Count; i++){
+                Button button = new Button();
+                button.Tag = i;
+                sidebar.Controls.Add(button);
+                button.Text = CharacterList.ElementAt(i).Name;
+                button.Width = sidebar.Width - 10;
+                button.Height = 80;
+            }
+        }
+
         public MainForm()
         {
-            CharacterList = LoadCharacter();
             InitializeComponent();
-        }
-
-        
-        private void OnOffPictureBox1()
-        {
-            if (pictureBox1.Visible == false)
-            {
-                pictureBox1.Visible = true;
-            }
-        }
-
-        private void JinhsiSelect_Click(object sender, EventArgs e)
-        {
-            OnOffPictureBox1();
-            pictureBox1.Image = JinhsiBMP;
-            characterCursor = "Jinhsi";
-        }
-
-        private void ChangliSelect_Click(object sender, EventArgs e)
-        {
-            OnOffPictureBox1();
-            pictureBox1.Image = ChangliBMP;
-            characterCursor = "Changli";
-        }
-
-        private void JinhsiIconSide_Click(object sender, EventArgs e)
-        {
-            OnOffPictureBox1();
-            pictureBox1.Image = JinhsiBMP;
-            characterCursor = "Jinhsi";
-        }
-
-        private void ChangliIconSide_Click(object sender, EventArgs e)
-        {
-            OnOffPictureBox1();
-            pictureBox1.Image = ChangliBMP;
-            characterCursor = "Changli";
-        }
-
-        private void SideBarCollapseButton_Click(object sender, EventArgs e)
-        {
-            // Expand the Sidebar
-            // Hide the buttonSelect of the characters
-            if (sidebarCollapse == true)
-            {
-                ChangliIconSide.Visible = true;
-                JinhsiIconSide.Visible = true;
-
-                ChangliSelect.Visible = false;
-                JinhsiSelect.Visible = false;
-
-                //SideBar.Width = 286;
-                timer1.Start();
-                sidebarCollapse = false;
-            }
-            // Collapse the Sidebar
-            // Hide the characterIcon
-            else if (sidebarCollapse == false)
-            {
-                ChangliIconSide.Visible = false;
-                JinhsiIconSide.Visible = false;
-
-                ChangliSelect.Visible = true;
-                JinhsiSelect.Visible = true;
-
-                //SideBar.Width = 90;
-                timer1.Start();
-                sidebarCollapse = true;
-            }
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            //if (sidebarCollapse == true)
-            //{
-            //    SideBar.Width += 14;
-            //    if (SideBar.Width >= 330)
-            //    {
-            //        timer1.Stop();
-            //    }
-            //}
-            //else if (sidebarCollapse == false)
-            //{
-            //    SideBar.Width -= 14;
-            //    if (SideBar.Width <= 110)
-            //    {
-            //        timer1.Stop();
-            //    }
-            //}
+            CharacterList = LoadCharacter();
+            LoadSidebar(CharacterList);
+            
         }
 
         private void BuildButton_Click(object sender, EventArgs e)
