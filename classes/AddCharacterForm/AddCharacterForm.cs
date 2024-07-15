@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Text.Json;
 using System.IO;
 using System.Reflection;
+using ChangliReborn.classes.CharacterClass;
 
 namespace ChangliReborn
 {
