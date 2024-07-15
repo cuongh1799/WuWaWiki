@@ -1,6 +1,7 @@
 using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Text.Json;
+using ChangliReborn.classes.CharacterClass;
 using ChangliReborn.classes.WuWaButton;
 
 namespace ChangliReborn
@@ -33,18 +34,27 @@ namespace ChangliReborn
             foreach (FileInfo file in files)
             {
                 string jsonString = File.ReadAllText(file.FullName);
-
                 /*
-                    LINE 46-47 IS NEEDED BECAUSE:
+                    LINE 49-50 IS NEEDED BECAUSE:
 
-                    LINE 45 WILL MAKE CharBanner and CharIcon NULL BECAUSE DESERIALIZE ASSIGN
+                    LINE 46 WILL MAKE CharBanner and CharIcon NULL BECAUSE DESERIALIZE ASSIGN
                     IT TO NULL
 
                     NULL BECAUSE WE'RE NOT ACTUALLY CONVERTING IT BEFORE CREATE CHARACTER
                 */
                 Character character = JsonSerializer.Deserialize<Character>(jsonString);
-                character.CharBanner = new Bitmap(character.CharBannerURL);
-                character.CharIcon = new Bitmap(character.CharIconURL);
+                try
+                {
+                    character.CharBanner = new Bitmap(character.CharBannerURL);
+                    character.CharIcon = new Bitmap(character.CharIconURL);
+                }
+                catch(Exception e) 
+                {
+                    System.Console.WriteLine(e.Message);
+                    character.CharBanner = null;
+                    character.CharIcon =  null;
+                }
+
                 if (character != null)
                 {
                     CharacterList.Add(character);
