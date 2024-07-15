@@ -36,7 +36,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGQoAzPd9j9CrU="
 					},
-					"name": "ActivityDiagram1",
+					"name": "AddCharacterForm",
 					"ownedViews": [
 						{
 							"_type": "UMLActionView",
@@ -3852,7 +3852,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGQoeoLvbyPjN8="
 									},
-									"name": "String nameInput"
+									"name": "String nameInput",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -3860,7 +3861,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGQoeoLvbyPjN8="
 									},
-									"name": "String materialInput"
+									"name": "String materialInput",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -3868,7 +3870,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGQoeoLvbyPjN8="
 									},
-									"name": "string classMaterialInput"
+									"name": "string classMaterialInput",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -3876,7 +3879,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGQoeoLvbyPjN8="
 									},
-									"name": "String bossMaterialinput"
+									"name": "String bossMaterialinput",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -3884,7 +3888,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGQoeoLvbyPjN8="
 									},
-									"name": "String skillMatInput"
+									"name": "String skillMatInput",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",

@@ -94,9 +94,10 @@
             // 
             // addCharacterButton
             // 
+            addCharacterButton.BackgroundImageLayout = ImageLayout.Center;
             addCharacterButton.Location = new Point(3, 3);
             addCharacterButton.Name = "addCharacterButton";
-            addCharacterButton.Size = new Size(309, 62);
+            addCharacterButton.Size = new Size(309, 66);
             addCharacterButton.TabIndex = 7;
             addCharacterButton.Text = "Add Character";
             addCharacterButton.UseVisualStyleBackColor = true;
@@ -138,12 +139,12 @@
         }
 
         #endregion
-        private PictureBox pictureBox1;
         private FlowLayoutPanel flowLayoutPanel1;
         private Button MaterialButton;
         private Button BuildButton;
         private RichTextBox MaterialPanel;
         private Button addCharacterButton;
         private FlowLayoutPanel sidebar;
+        public PictureBox pictureBox1;
     }
 }

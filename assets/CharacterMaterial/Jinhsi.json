@@ -2,8 +2,8 @@
   "Name": "Jinhsi",
   "ClassMaterialType": "Elegy Tacet Core",
   "BossMaterialType": "Sentinel\u0027s Dagger",
-  "CharBannerURL": "Not set",
-  "CharIconURL": "Not set",
+  "CharBannerURL": "..\\..\\..\\assets\\CharacterBanner\\JinhsiBanner.jpg",
+  "CharIconURL": "..\\..\\..\\assets\\CharacterIcon\\Jinshi_icon.png",
   "Material": {
     "Howler Core T0": 52,
     "Howler Core T1": 29,

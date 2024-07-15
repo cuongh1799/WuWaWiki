@@ -2,8 +2,8 @@
   "Name": "Changli",
   "ClassMaterialType": "Pavo Plum",
   "BossMaterialType": "Rage Tacet Core",
-  "CharBannerURL": "C:\\Users\\cuong\\Documents\\CodeProject\\ChangliReborn\\assets\\CharacterBanner\\ChangliBanner.jpeg",
-  "CharIconURL": "C:\\Users\\cuong\\Documents\\CodeProject\\ChangliReborn\\assets\\CharacterIcon\\Changli_icon.png",
+  "CharBannerURL": "..\\..\\..\\assets\\CharacterBanner\\ChangliBanner.jpeg",
+  "CharIconURL": "..\\..\\..\\assets\\CharacterIcon\\Changli_icon.png",
   "Material": {
     "Tailored Ring T0": 52,
     "Tailored Ring T1": 29,

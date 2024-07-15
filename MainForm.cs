@@ -1,6 +1,7 @@
 using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Text.Json;
+using ChangliReborn.classes.WuWaButton;
 
 namespace ChangliReborn
 {
@@ -32,7 +33,18 @@ namespace ChangliReborn
             foreach (FileInfo file in files)
             {
                 string jsonString = File.ReadAllText(file.FullName);
+
+                /*
+                    LINE 46-47 IS NEEDED BECAUSE:
+
+                    LINE 45 WILL MAKE CharBanner and CharIcon NULL BECAUSE DESERIALIZE ASSIGN
+                    IT TO NULL
+
+                    NULL BECAUSE WE'RE NOT ACTUALLY CONVERTING IT BEFORE CREATE CHARACTER
+                */
                 Character character = JsonSerializer.Deserialize<Character>(jsonString);
+                character.CharBanner = new Bitmap(character.CharBannerURL);
+                character.CharIcon = new Bitmap(character.CharIconURL);
                 if (character != null)
                 {
                     CharacterList.Add(character);
@@ -43,13 +55,9 @@ namespace ChangliReborn
 
         private void LoadSidebar(List<Character> CharacterList)
         {
-            for(int i = 0; i < CharacterList.Count; i++){
-                Button button = new Button();
-                button.Tag = i;
-                sidebar.Controls.Add(button);
-                button.Text = CharacterList.ElementAt(i).Name;
-                button.Width = sidebar.Width - 10;
-                button.Height = 80;
+            foreach(Character c in CharacterList)
+            {
+                sidebar.Controls.Add(new WuWaButton(c));
             }
         }
 
@@ -88,6 +96,11 @@ namespace ChangliReborn
         {
             AddCharacterForm addCharacterForm = new AddCharacterForm();
             addCharacterForm.ShowDialog();
+        }
+
+        private void WuWaButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

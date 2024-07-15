@@ -32,6 +32,8 @@ namespace ChangliReborn
         public string BossMaterialType { get; set; } = "Not set";
         public string CharBannerURL { get; set; } = "Not set";
         public string CharIconURL{ get; set; } = "Not set";
+        public Bitmap CharBanner { get; set; } = null;
+        public Bitmap CharIcon { get; set; } = null;
         public Dictionary<string, int> Material { get; set; } = new Dictionary<string, int>();
 
         public void setName(string input)
