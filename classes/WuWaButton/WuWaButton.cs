@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using ChangliReborn.classes.CharacterClass;
@@ -9,7 +10,7 @@ namespace ChangliReborn.classes.WuWaButton
 {
     internal class WuWaButton : Button
     {
-        Character charButton;
+        public Character charButton { get; set; } = null;
         public WuWaButton(Character c)
         {
             this.Name = c.Name + "Button";
@@ -21,12 +22,16 @@ namespace ChangliReborn.classes.WuWaButton
             {
                 this.Text = c.Name;
             }
-            
         }
 
-        private void showBanner(PictureBox p)
+        public Image returnCharBanner()
         {
-            p.Image = charButton.CharBanner;
+            return getCharButton().CharBanner;
+        }
+            
+        public Character getCharButton()
+        {
+            return charButton;
         }
     }
 }

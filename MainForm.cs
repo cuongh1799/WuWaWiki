@@ -8,21 +8,6 @@ namespace ChangliReborn
 {
     public partial class MainForm : Form
     {
-        Bitmap JinhsiBMP = new Bitmap("..\\..\\..\\assets\\CharacterBanner\\JinhsiBanner.jpg");
-        Bitmap ChangliBMP = new Bitmap("..\\..\\..\\assets\\CharacterBanner\\ChangliBanner.jpeg");
-        Boolean sidebarCollapse = false;
-        string characterCursor = new string("");
-
-        /*
-            JSON SERIALIZATION AND DESERIALIZATION FOR FETCHING CHARACTER DATA
-        */
-        //var options = new JsonSerializerOptions { WriteIndented = true };
-
-        public static string ChangliJSON = File.ReadAllText("..\\..\\..\\assets\\CharacterMaterial\\ChangliMaterial.json");
-        public static string JinhsiJSON = File.ReadAllText("..\\..\\..\\assets\\CharacterMaterial\\JinhsiMaterial.json");
-        //Character Changli = JsonSerializer.Deserialize<Character>(ChangliJSON);
-        //Character Jinhsi = JsonSerializer.Deserialize<Character>(JinhsiJSON);
-
         // Cache character list
         List<Character> CharacterList;
         private List<Character> LoadCharacter()
@@ -35,9 +20,9 @@ namespace ChangliReborn
             {
                 string jsonString = File.ReadAllText(file.FullName);
                 /*
-                    LINE 49-50 IS NEEDED BECAUSE:
+                    LINE 32-33 IS NEEDED BECAUSE:
 
-                    LINE 46 WILL MAKE CharBanner and CharIcon NULL BECAUSE DESERIALIZE ASSIGN
+                    LINE 30 WILL MAKE CharBanner and CharIcon NULL BECAUSE DESERIALIZE ASSIGN
                     IT TO NULL
 
                     NULL BECAUSE WE'RE NOT ACTUALLY CONVERTING IT BEFORE CREATE CHARACTER
@@ -67,7 +52,9 @@ namespace ChangliReborn
         {
             foreach(Character c in CharacterList)
             {
-                sidebar.Controls.Add(new WuWaButton(c));
+                WuWaButton w = new WuWaButton(c);
+                w.Click += WuWaButton_Click;
+                sidebar.Controls.Add(w);
             }
         }
 
@@ -76,7 +63,7 @@ namespace ChangliReborn
             InitializeComponent();
             CharacterList = LoadCharacter();
             LoadSidebar(CharacterList);
-            
+            System.Console.WriteLine("You are here");
         }
 
         private void BuildButton_Click(object sender, EventArgs e)
@@ -88,7 +75,7 @@ namespace ChangliReborn
             else if (MaterialPanel.Visible == false)
             {
                 MaterialPanel.Visible = true;
-                switch (characterCursor)
+                switch (true)
                 {
                     //case "Changli":
                     //    MaterialPanel.Clear();
@@ -110,7 +97,7 @@ namespace ChangliReborn
 
         private void WuWaButton_Click(object sender, EventArgs e)
         {
-
+            pictureBox1.Image = (sender as WuWaButton).returnCharBanner();
         }
     }
 }
