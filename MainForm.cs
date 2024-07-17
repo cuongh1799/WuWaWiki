@@ -3,11 +3,14 @@ using System.Runtime.CompilerServices;
 using System.Text.Json;
 using ChangliReborn.classes.CharacterClass;
 using ChangliReborn.classes.WuWaButton;
+using ChangliReborn.classes;
+using ChangliReborn.classes.MaterialForm;
 
 namespace ChangliReborn
 {
     public partial class MainForm : Form
-    {
+    { 
+        Character charCursor = new Character(); // use this save the current chosen char
         // Cache character list
         List<Character> CharacterList;
         private List<Character> LoadCharacter()
@@ -68,25 +71,8 @@ namespace ChangliReborn
 
         private void BuildButton_Click(object sender, EventArgs e)
         {
-            if (MaterialPanel.Visible == true)
-            {
-                MaterialPanel.Visible = false;
-            }
-            else if (MaterialPanel.Visible == false)
-            {
-                MaterialPanel.Visible = true;
-                switch (true)
-                {
-                    //case "Changli":
-                    //    MaterialPanel.Clear();
-                    //    MaterialPanel.AppendText(Changli.returnInfoString());
-                    //    break;
-                    //case "Jinhsi":
-                    //    MaterialPanel.Clear();
-                    //    MaterialPanel.AppendText(Jinhsi.returnInfoString());
-                    //    break;
-                }
-            }
+            MaterialForm materialForm = new MaterialForm(charCursor);
+            materialForm.ShowDialog();
         }
 
         private void addCharacterButton_Click(object sender, EventArgs e)
@@ -98,6 +84,7 @@ namespace ChangliReborn
         private void WuWaButton_Click(object sender, EventArgs e)
         {
             pictureBox1.Image = (sender as WuWaButton).returnCharBanner();
+            charCursor = (sender as WuWaButton).getCharButton();
         }
     }
 }
