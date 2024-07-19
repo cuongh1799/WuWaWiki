@@ -28,14 +28,6 @@ Because the last code structure requires manually adding and code the whole butt
 This project is still in the works, however this is some expected images of the app:
 
 Demonstration:
-![](ForReadme/demonstration.gif)
 
-![Image](ForReadme/ChoosingCharacter.png)
+![explorer_I20DAdqna9](https://github.com/user-attachments/assets/5609e920-a960-46cb-bb53-726adca10b89)
 
-(Materials design is in the works, might update later)
-
-![Image](ForReadme/Materials.png)
-
-Basically by utilizing the `TableLayoutPanel` as the blueprint for the Layout, using `pictureBox` to store and load pictue from local files
-
-The data is handle by reading the `json` file in `assets/CharacterBuild`
