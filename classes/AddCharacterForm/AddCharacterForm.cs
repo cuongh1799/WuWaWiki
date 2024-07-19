@@ -45,10 +45,11 @@ namespace ChangliReborn
         {
             Character newchar = new Character
                 (
-                    InputCharacterName.Text, 
-                    AscensionMatInput.Text, 
+                    InputCharacterName.Text,  
                     ClassMatNameInput.Text, 
                     BossMatInput.Text,
+                    FlowerTypeInput.Text,
+                    AscensionMatInput.Text,
                     SkillMatInput.Text, 
                     CharBannerURL.Text, 
                     CharIconURL.Text

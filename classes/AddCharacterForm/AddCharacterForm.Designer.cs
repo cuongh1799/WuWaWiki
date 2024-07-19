@@ -47,6 +47,8 @@
             CharIconURL = new TextBox();
             label1 = new Label();
             SkillMatInput = new TextBox();
+            label2 = new Label();
+            FlowerTypeInput = new TextBox();
             SuspendLayout();
             // 
             // AddCharacterJSON
@@ -61,7 +63,7 @@
             // 
             // InputCharacterName
             // 
-            InputCharacterName.Location = new Point(154, 55);
+            InputCharacterName.Location = new Point(154, 30);
             InputCharacterName.Name = "InputCharacterName";
             InputCharacterName.Size = new Size(100, 23);
             InputCharacterName.TabIndex = 1;
@@ -69,7 +71,7 @@
             // labelName
             // 
             labelName.AutoSize = true;
-            labelName.Location = new Point(40, 63);
+            labelName.Location = new Point(40, 38);
             labelName.Name = "labelName";
             labelName.Size = new Size(97, 15);
             labelName.TabIndex = 2;
@@ -78,7 +80,7 @@
             // MaterialT0
             // 
             MaterialT0.AutoSize = true;
-            MaterialT0.Location = new Point(18, 108);
+            MaterialT0.Location = new Point(18, 83);
             MaterialT0.Name = "MaterialT0";
             MaterialT0.Size = new Size(119, 15);
             MaterialT0.TabIndex = 4;
@@ -86,7 +88,7 @@
             // 
             // AscensionMatInput
             // 
-            AscensionMatInput.Location = new Point(154, 100);
+            AscensionMatInput.Location = new Point(154, 75);
             AscensionMatInput.Name = "AscensionMatInput";
             AscensionMatInput.Size = new Size(216, 23);
             AscensionMatInput.TabIndex = 3;
@@ -94,7 +96,7 @@
             // CharacterBannerLabel
             // 
             CharacterBannerLabel.AutoSize = true;
-            CharacterBannerLabel.Location = new Point(24, 295);
+            CharacterBannerLabel.Location = new Point(24, 310);
             CharacterBannerLabel.Name = "CharacterBannerLabel";
             CharacterBannerLabel.Size = new Size(107, 15);
             CharacterBannerLabel.TabIndex = 6;
@@ -103,7 +105,7 @@
             // CharacterIconLabel
             // 
             CharacterIconLabel.AutoSize = true;
-            CharacterIconLabel.Location = new Point(35, 338);
+            CharacterIconLabel.Location = new Point(35, 353);
             CharacterIconLabel.Name = "CharacterIconLabel";
             CharacterIconLabel.Size = new Size(93, 15);
             CharacterIconLabel.TabIndex = 7;
@@ -112,7 +114,7 @@
             // ClassMaterialLabel
             // 
             ClassMaterialLabel.AutoSize = true;
-            ClassMaterialLabel.Location = new Point(51, 156);
+            ClassMaterialLabel.Location = new Point(51, 131);
             ClassMaterialLabel.Name = "ClassMaterialLabel";
             ClassMaterialLabel.Size = new Size(86, 15);
             ClassMaterialLabel.TabIndex = 9;
@@ -120,7 +122,7 @@
             // 
             // ClassMatNameInput
             // 
-            ClassMatNameInput.Location = new Point(154, 148);
+            ClassMatNameInput.Location = new Point(154, 123);
             ClassMatNameInput.Name = "ClassMatNameInput";
             ClassMatNameInput.Size = new Size(216, 23);
             ClassMatNameInput.TabIndex = 8;
@@ -128,7 +130,7 @@
             // BossMatLabel
             // 
             BossMatLabel.AutoSize = true;
-            BossMatLabel.Location = new Point(51, 206);
+            BossMatLabel.Location = new Point(51, 172);
             BossMatLabel.Name = "BossMatLabel";
             BossMatLabel.Size = new Size(83, 15);
             BossMatLabel.TabIndex = 11;
@@ -136,7 +138,7 @@
             // 
             // BossMatInput
             // 
-            BossMatInput.Location = new Point(154, 198);
+            BossMatInput.Location = new Point(154, 164);
             BossMatInput.Name = "BossMatInput";
             BossMatInput.Size = new Size(216, 23);
             BossMatInput.TabIndex = 10;
@@ -151,7 +153,7 @@
             // 
             // ChooseCharBanner
             // 
-            ChooseCharBanner.Location = new Point(148, 287);
+            ChooseCharBanner.Location = new Point(148, 302);
             ChooseCharBanner.Name = "ChooseCharBanner";
             ChooseCharBanner.Size = new Size(75, 23);
             ChooseCharBanner.TabIndex = 12;
@@ -161,7 +163,7 @@
             // 
             // ChooseCharIcon
             // 
-            ChooseCharIcon.Location = new Point(148, 334);
+            ChooseCharIcon.Location = new Point(148, 349);
             ChooseCharIcon.Name = "ChooseCharIcon";
             ChooseCharIcon.Size = new Size(75, 23);
             ChooseCharIcon.TabIndex = 13;
@@ -171,14 +173,14 @@
             // 
             // CharBannerURL
             // 
-            CharBannerURL.Location = new Point(239, 287);
+            CharBannerURL.Location = new Point(239, 302);
             CharBannerURL.Name = "CharBannerURL";
             CharBannerURL.Size = new Size(216, 23);
             CharBannerURL.TabIndex = 14;
             // 
             // CharIconURL
             // 
-            CharIconURL.Location = new Point(239, 334);
+            CharIconURL.Location = new Point(239, 349);
             CharIconURL.Name = "CharIconURL";
             CharIconURL.Size = new Size(216, 23);
             CharIconURL.TabIndex = 15;
@@ -186,7 +188,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(51, 254);
+            label1.Location = new Point(51, 260);
             label1.Name = "label1";
             label1.Size = new Size(80, 15);
             label1.TabIndex = 17;
@@ -194,16 +196,34 @@
             // 
             // SkillMatInput
             // 
-            SkillMatInput.Location = new Point(154, 246);
+            SkillMatInput.Location = new Point(154, 252);
             SkillMatInput.Name = "SkillMatInput";
             SkillMatInput.Size = new Size(216, 23);
             SkillMatInput.TabIndex = 16;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(51, 211);
+            label2.Name = "label2";
+            label2.Size = new Size(71, 15);
+            label2.TabIndex = 19;
+            label2.Text = "Flower type:";
+            // 
+            // FlowerTypeInput
+            // 
+            FlowerTypeInput.Location = new Point(154, 203);
+            FlowerTypeInput.Name = "FlowerTypeInput";
+            FlowerTypeInput.Size = new Size(216, 23);
+            FlowerTypeInput.TabIndex = 18;
             // 
             // AddCharacterForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label2);
+            Controls.Add(FlowerTypeInput);
             Controls.Add(label1);
             Controls.Add(SkillMatInput);
             Controls.Add(CharIconURL);
@@ -248,5 +268,7 @@
         private TextBox CharIconURL;
         private Label label1;
         private TextBox SkillMatInput;
+        private Label label2;
+        private TextBox FlowerTypeInput;
     }
 }

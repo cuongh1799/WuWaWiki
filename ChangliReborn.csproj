@@ -39,6 +39,7 @@
 
   <ItemGroup>
     <Folder Include="assets\CharacterBuild\" />
+    <Folder Include="assets\CharacterMaterial\" />
   </ItemGroup>
 
 </Project>
