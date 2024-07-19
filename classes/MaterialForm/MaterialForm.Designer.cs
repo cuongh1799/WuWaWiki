@@ -57,10 +57,10 @@
             label10 = new Label();
             label11 = new Label();
             label12 = new Label();
-            pictureBox11 = new PictureBox();
-            pictureBox12 = new PictureBox();
-            pictureBox13 = new PictureBox();
-            pictureBox14 = new PictureBox();
+            skillmatpic5 = new PictureBox();
+            skillmatpic7 = new PictureBox();
+            skillmatpic4 = new PictureBox();
+            skillmatpic6 = new PictureBox();
             FlowerTypeLabel = new Label();
             FlowerTypePic = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)MatFormPic).BeginInit();
@@ -74,10 +74,10 @@
             ((System.ComponentModel.ISupportInitialize)skillMatpic3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)skillMatpic0).BeginInit();
             ((System.ComponentModel.ISupportInitialize)skillMatpic2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)skillmatpic5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)skillmatpic7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)skillmatpic4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)skillmatpic6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FlowerTypePic).BeginInit();
             SuspendLayout();
             // 
@@ -351,37 +351,37 @@
             label12.TabIndex = 29;
             label12.Text = "x 55";
             // 
-            // pictureBox11
+            // skillmatpic5
             // 
-            pictureBox11.Location = new Point(1092, 448);
-            pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(80, 80);
-            pictureBox11.TabIndex = 28;
-            pictureBox11.TabStop = false;
+            skillmatpic5.Location = new Point(1092, 448);
+            skillmatpic5.Name = "skillmatpic5";
+            skillmatpic5.Size = new Size(80, 80);
+            skillmatpic5.TabIndex = 28;
+            skillmatpic5.TabStop = false;
             // 
-            // pictureBox12
+            // skillmatpic7
             // 
-            pictureBox12.Location = new Point(1092, 344);
-            pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(80, 80);
-            pictureBox12.TabIndex = 27;
-            pictureBox12.TabStop = false;
+            skillmatpic7.Location = new Point(1092, 344);
+            skillmatpic7.Name = "skillmatpic7";
+            skillmatpic7.Size = new Size(80, 80);
+            skillmatpic7.TabIndex = 27;
+            skillmatpic7.TabStop = false;
             // 
-            // pictureBox13
+            // skillmatpic4
             // 
-            pictureBox13.Location = new Point(949, 448);
-            pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(80, 80);
-            pictureBox13.TabIndex = 26;
-            pictureBox13.TabStop = false;
+            skillmatpic4.Location = new Point(949, 448);
+            skillmatpic4.Name = "skillmatpic4";
+            skillmatpic4.Size = new Size(80, 80);
+            skillmatpic4.TabIndex = 26;
+            skillmatpic4.TabStop = false;
             // 
-            // pictureBox14
+            // skillmatpic6
             // 
-            pictureBox14.Location = new Point(949, 344);
-            pictureBox14.Name = "pictureBox14";
-            pictureBox14.Size = new Size(80, 80);
-            pictureBox14.TabIndex = 25;
-            pictureBox14.TabStop = false;
+            skillmatpic6.Location = new Point(949, 344);
+            skillmatpic6.Name = "skillmatpic6";
+            skillmatpic6.Size = new Size(80, 80);
+            skillmatpic6.TabIndex = 25;
+            skillmatpic6.TabStop = false;
             // 
             // FlowerTypeLabel
             // 
@@ -412,10 +412,10 @@
             Controls.Add(label10);
             Controls.Add(label11);
             Controls.Add(label12);
-            Controls.Add(pictureBox11);
-            Controls.Add(pictureBox12);
-            Controls.Add(pictureBox13);
-            Controls.Add(pictureBox14);
+            Controls.Add(skillmatpic5);
+            Controls.Add(skillmatpic7);
+            Controls.Add(skillmatpic4);
+            Controls.Add(skillmatpic6);
             Controls.Add(label4);
             Controls.Add(label5);
             Controls.Add(label6);
@@ -456,10 +456,10 @@
             ((System.ComponentModel.ISupportInitialize)skillMatpic3).EndInit();
             ((System.ComponentModel.ISupportInitialize)skillMatpic0).EndInit();
             ((System.ComponentModel.ISupportInitialize)skillMatpic2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
+            ((System.ComponentModel.ISupportInitialize)skillmatpic5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)skillmatpic7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)skillmatpic4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)skillmatpic6).EndInit();
             ((System.ComponentModel.ISupportInitialize)FlowerTypePic).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -496,10 +496,10 @@
         private Label label10;
         private Label label11;
         private Label label12;
-        private PictureBox pictureBox11;
-        private PictureBox pictureBox12;
-        private PictureBox pictureBox13;
-        private PictureBox pictureBox14;
+        private PictureBox skillmatpic5;
+        private PictureBox skillmatpic7;
+        private PictureBox skillmatpic4;
+        private PictureBox skillmatpic6;
         private Label FlowerTypeLabel;
         private PictureBox FlowerTypePic;
     }
