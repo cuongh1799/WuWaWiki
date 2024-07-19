@@ -20,6 +20,10 @@ Because the last code structure requires manually adding and code the whole butt
 - Move Character into new folder and CharacterClass namespace
 - Move other classes into classes folder
 
+## 19-07-2024, added fully working function when clicking `material` button.
+- The application is now able to scan and cache according material images based on different character's data
+- However, there are some memory leaks here and there, but we're workking on it :)
+
 ## You will need Visual Studio with .NET pack to run this project
 This project is still in the works, however this is some expected images of the app:
 
