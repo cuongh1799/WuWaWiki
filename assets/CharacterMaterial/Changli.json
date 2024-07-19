@@ -1,11 +1,12 @@
 {
   "Name": "Changli",
-  "ClassMaterialType": "Pavo Plum",
-  "BossMaterialType": "Rage Tacet Core",
+  "ClassMaterialType": "Rage Tacet Core",
+  "BossMaterialType": "Sentinel Dagger",
+  "FlowerType": "Pavo Plum",
   "AscensionMat": "Tailored Ring",
   "SkillMat": "Metallic Drip",
-  "CharBannerURL": "..\\..\\..\\assets\\CharacterBanner\\ChangliBanner.jpeg",
-  "CharIconURL": "..\\..\\..\\assets\\CharacterIcon\\Changli_icon.png",
+  "CharBannerURL": "C:\\Users\\cuong\\Documents\\CodeProject\\ChangliReborn\\assets\\CharacterBanner\\ChangliBanner.jpeg",
+  "CharIconURL": "C:\\Users\\cuong\\Documents\\CodeProject\\ChangliReborn\\assets\\CharacterIcon\\Changli_icon.png",
   "CharBanner": null,
   "CharIcon": null
 }

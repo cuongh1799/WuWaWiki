@@ -2,10 +2,11 @@
   "Name": "Jinhsi",
   "ClassMaterialType": "Elegy Tacet Core",
   "BossMaterialType": "Sentinel Dagger",
+  "FlowerType": "Gloom Slough",
   "AscensionMat": "Howler Core",
   "SkillMat": "Waveworm Residue",
-  "CharBannerURL": "..\\..\\..\\assets\\CharacterBanner\\JinhsiBanner.jpg",
-  "CharIconURL": "..\\..\\..\\assets\\CharacterIcon\\Jinshi_icon.png",
+  "CharBannerURL": "C:\\Users\\cuong\\Documents\\CodeProject\\ChangliReborn\\assets\\CharacterBanner\\JinhsiBanner.jpg",
+  "CharIconURL": "C:\\Users\\cuong\\Documents\\CodeProject\\ChangliReborn\\assets\\CharacterIcon\\Jinshi_icon.png",
   "CharBanner": null,
   "CharIcon": null
 }

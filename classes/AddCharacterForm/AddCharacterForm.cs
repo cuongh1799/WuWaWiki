@@ -48,6 +48,7 @@ namespace ChangliReborn
                     InputCharacterName.Text,  
                     ClassMatNameInput.Text, 
                     BossMatInput.Text,
+                    FlowerTypeInput.Text,
                     AscensionMatInput.Text,
                     SkillMatInput.Text, 
                     CharBannerURL.Text, 

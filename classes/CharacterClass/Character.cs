@@ -13,6 +13,7 @@ namespace ChangliReborn.classes.CharacterClass
                         string nameInput,
                         string classMaterialInput,
                         string bossMaterialinput,
+                        string flowerTypeInput,
                         string ascensionMatInput,
                         string skillMatInput,
                         string charBannerURl,
@@ -21,6 +22,7 @@ namespace ChangliReborn.classes.CharacterClass
             Name = nameInput;
             ClassMaterialType = classMaterialInput;
             BossMaterialType = bossMaterialinput;
+            FlowerType = flowerTypeInput;
             AscensionMat = ascensionMatInput;
             SkillMat = skillMatInput;
             CharBannerURL = charBannerURl;
@@ -30,6 +32,7 @@ namespace ChangliReborn.classes.CharacterClass
         public string Name { get; set; } = "Not set"; // Using auto-implemented property
         public string ClassMaterialType { get; set; } = "Not set";
         public string BossMaterialType { get; set; } = "Not set";
+        public string FlowerType { get; set; } = "Not set";
         public string AscensionMat { get; set; } = "Not set";
         public string SkillMat { get; set; } = "Not set";
         public string CharBannerURL { get; set; } = "Not set";
