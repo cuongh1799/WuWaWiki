@@ -8,6 +8,16 @@ namespace ChangliReborn.classes.MaterialDictionaryClass
 {
     internal class MaterialDictionary
     {
+        string classMatPath = "..\\..\\..\\assets\\IngameMaterial\\ClassMat";
+        string bossMatPath = "..\\..\\..\\assets\\IngameMaterial\\BossMat";
+        string FlowerMatPath = "..\\..\\..\\assets\\IngameMaterial\\FlowerType";
+        string normalMatPath = "..\\..\\..\\assets\\IngameMaterial\\NormalMat";
+
+        public Dictionary<string, Bitmap> ClassMatDic = new Dictionary<string, Bitmap>();
+        public Dictionary<string, Bitmap> BossMatDic = new Dictionary<string, Bitmap>();
+        public Dictionary<string, Bitmap> FlowerMatDic = new Dictionary<string, Bitmap>();
+        public Dictionary<string, string> NormalMatDic = new Dictionary<string, string>();
+
         public MaterialDictionary() {
             Start();
         }
@@ -29,15 +39,25 @@ namespace ChangliReborn.classes.MaterialDictionaryClass
             */
             FlowerMatDic.Add("Pavo Plum", new Bitmap(FlowerMatPath + "\\pavoplum.png"));
             FlowerMatDic.Add("Gloom Slough", new Bitmap(FlowerMatPath + "\\gloomslough.png"));
-        }
-        string classMatPath = "..\\..\\..\\assets\\IngameMaterial\\ClassMat";
-        string bossMatPath = "..\\..\\..\\assets\\IngameMaterial\\BossMat";
-        string FlowerMatPath = "..\\..\\..\\assets\\IngameMaterial\\FlowerType";
 
-        public Dictionary<string, Bitmap> ClassMatDic = new Dictionary<string, Bitmap>();
-        public Dictionary<string, Bitmap> BossMatDic = new Dictionary<string, Bitmap>();
-        public Dictionary<string, Bitmap> FlowerMatDic = new Dictionary<string, Bitmap>();
-        //public Dictionary<string, string> AscensionMatDic = new Dictionary<string, string>();
-        //public Dictionary<string, string> SkillMatDic = new Dictionary<string, string>();
+            /*
+                NORMAL MATS (INCLUDING ASCENSION AND SKILL)
+            */
+            DirectoryInfo dir = new DirectoryInfo(normalMatPath);
+            // Get all directories and files within the directory
+            FileSystemInfo[] items = dir.GetFileSystemInfos();
+
+            // Iterate through each item (both files and folders)
+            foreach (FileSystemInfo item in items)
+            {
+                // Add only folders to the dictionary
+                if (item is DirectoryInfo)
+                {
+                    DirectoryInfo folder = (DirectoryInfo)item;
+                    NormalMatDic.Add(folder.Name, folder.FullName);
+                }
+            }
+        }
+        
     }
 }

@@ -37,10 +37,10 @@
             AscensionMatLabel = new Label();
             SkillMatLabel1 = new Label();
             SkillMatLabel2 = new Label();
-            pictureBox4 = new PictureBox();
-            pictureBox6 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            pictureBox5 = new PictureBox();
+            AscensionMatPic1 = new PictureBox();
+            AscensionMatPic2 = new PictureBox();
+            AscensionMatPic3 = new PictureBox();
+            AscensionMatPic4 = new PictureBox();
             label9 = new Label();
             label1 = new Label();
             label2 = new Label();
@@ -49,10 +49,10 @@
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
-            pictureBox7 = new PictureBox();
-            pictureBox8 = new PictureBox();
-            pictureBox9 = new PictureBox();
-            pictureBox10 = new PictureBox();
+            skillMatpic1 = new PictureBox();
+            skillMatpic3 = new PictureBox();
+            skillMatpic0 = new PictureBox();
+            skillMatpic2 = new PictureBox();
             label8 = new Label();
             label10 = new Label();
             label11 = new Label();
@@ -66,14 +66,14 @@
             ((System.ComponentModel.ISupportInitialize)MatFormPic).BeginInit();
             ((System.ComponentModel.ISupportInitialize)BossMatPic).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ClassMatPic).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)AscensionMatPic1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)AscensionMatPic2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)AscensionMatPic3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)AscensionMatPic4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)skillMatpic1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)skillMatpic3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)skillMatpic0).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)skillMatpic2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
@@ -141,7 +141,7 @@
             // 
             AscensionMatLabel.AutoSize = true;
             AscensionMatLabel.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            AscensionMatLabel.Location = new Point(674, 281);
+            AscensionMatLabel.Location = new Point(716, 281);
             AscensionMatLabel.Name = "AscensionMatLabel";
             AscensionMatLabel.Size = new Size(193, 30);
             AscensionMatLabel.TabIndex = 6;
@@ -151,7 +151,7 @@
             // 
             SkillMatLabel1.AutoSize = true;
             SkillMatLabel1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            SkillMatLabel1.Location = new Point(674, 557);
+            SkillMatLabel1.Location = new Point(728, 557);
             SkillMatLabel1.Name = "SkillMatLabel1";
             SkillMatLabel1.Size = new Size(146, 30);
             SkillMatLabel1.TabIndex = 7;
@@ -161,43 +161,43 @@
             // 
             SkillMatLabel2.AutoSize = true;
             SkillMatLabel2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            SkillMatLabel2.Location = new Point(1016, 557);
+            SkillMatLabel2.Location = new Point(997, 557);
             SkillMatLabel2.Name = "SkillMatLabel2";
             SkillMatLabel2.Size = new Size(146, 30);
             SkillMatLabel2.TabIndex = 8;
             SkillMatLabel2.Text = "SkillMatLabel2";
             // 
-            // pictureBox4
+            // AscensionMatPic1
             // 
-            pictureBox4.Location = new Point(674, 220);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(48, 40);
-            pictureBox4.TabIndex = 10;
-            pictureBox4.TabStop = false;
+            AscensionMatPic1.Location = new Point(642, 180);
+            AscensionMatPic1.Name = "AscensionMatPic1";
+            AscensionMatPic1.Size = new Size(80, 80);
+            AscensionMatPic1.TabIndex = 10;
+            AscensionMatPic1.TabStop = false;
             // 
-            // pictureBox6
+            // AscensionMatPic2
             // 
-            pictureBox6.Location = new Point(790, 220);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(50, 40);
-            pictureBox6.TabIndex = 12;
-            pictureBox6.TabStop = false;
+            AscensionMatPic2.Location = new Point(783, 180);
+            AscensionMatPic2.Name = "AscensionMatPic2";
+            AscensionMatPic2.Size = new Size(80, 80);
+            AscensionMatPic2.TabIndex = 12;
+            AscensionMatPic2.TabStop = false;
             // 
-            // pictureBox3
+            // AscensionMatPic3
             // 
-            pictureBox3.Location = new Point(674, 80);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(46, 41);
-            pictureBox3.TabIndex = 9;
-            pictureBox3.TabStop = false;
+            AscensionMatPic3.Location = new Point(642, 67);
+            AscensionMatPic3.Name = "AscensionMatPic3";
+            AscensionMatPic3.Size = new Size(80, 80);
+            AscensionMatPic3.TabIndex = 9;
+            AscensionMatPic3.TabStop = false;
             // 
-            // pictureBox5
+            // AscensionMatPic4
             // 
-            pictureBox5.Location = new Point(790, 80);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(53, 41);
-            pictureBox5.TabIndex = 11;
-            pictureBox5.TabStop = false;
+            AscensionMatPic4.Location = new Point(783, 67);
+            AscensionMatPic4.Name = "AscensionMatPic4";
+            AscensionMatPic4.Size = new Size(80, 80);
+            AscensionMatPic4.TabIndex = 11;
+            AscensionMatPic4.TabStop = false;
             // 
             // label9
             // 
@@ -213,7 +213,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(728, 230);
+            label1.Location = new Point(728, 211);
             label1.Name = "label1";
             label1.Size = new Size(40, 30);
             label1.TabIndex = 14;
@@ -223,7 +223,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(846, 230);
+            label2.Location = new Point(869, 211);
             label2.Name = "label2";
             label2.Size = new Size(51, 30);
             label2.TabIndex = 15;
@@ -233,7 +233,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(857, 91);
+            label3.Location = new Point(869, 91);
             label3.Name = "label3";
             label3.Size = new Size(40, 30);
             label3.TabIndex = 16;
@@ -243,7 +243,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(857, 355);
+            label4.Location = new Point(869, 368);
             label4.Name = "label4";
             label4.Size = new Size(51, 30);
             label4.TabIndex = 24;
@@ -253,7 +253,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(846, 494);
+            label5.Location = new Point(871, 478);
             label5.Name = "label5";
             label5.Size = new Size(51, 30);
             label5.TabIndex = 23;
@@ -263,7 +263,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(728, 494);
+            label6.Location = new Point(728, 478);
             label6.Name = "label6";
             label6.Size = new Size(51, 30);
             label6.TabIndex = 22;
@@ -273,49 +273,49 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(726, 355);
+            label7.Location = new Point(726, 368);
             label7.Name = "label7";
             label7.Size = new Size(51, 30);
             label7.TabIndex = 21;
             label7.Text = "x 40";
             // 
-            // pictureBox7
+            // skillMatpic1
             // 
-            pictureBox7.Location = new Point(790, 484);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(50, 40);
-            pictureBox7.TabIndex = 20;
-            pictureBox7.TabStop = false;
+            skillMatpic1.Location = new Point(785, 448);
+            skillMatpic1.Name = "skillMatpic1";
+            skillMatpic1.Size = new Size(80, 80);
+            skillMatpic1.TabIndex = 20;
+            skillMatpic1.TabStop = false;
             // 
-            // pictureBox8
+            // skillMatpic3
             // 
-            pictureBox8.Location = new Point(790, 344);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(53, 41);
-            pictureBox8.TabIndex = 19;
-            pictureBox8.TabStop = false;
+            skillMatpic3.Location = new Point(783, 344);
+            skillMatpic3.Name = "skillMatpic3";
+            skillMatpic3.Size = new Size(80, 80);
+            skillMatpic3.TabIndex = 19;
+            skillMatpic3.TabStop = false;
             // 
-            // pictureBox9
+            // skillMatpic0
             // 
-            pictureBox9.Location = new Point(674, 484);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(48, 40);
-            pictureBox9.TabIndex = 18;
-            pictureBox9.TabStop = false;
+            skillMatpic0.Location = new Point(642, 448);
+            skillMatpic0.Name = "skillMatpic0";
+            skillMatpic0.Size = new Size(80, 80);
+            skillMatpic0.TabIndex = 18;
+            skillMatpic0.TabStop = false;
             // 
-            // pictureBox10
+            // skillMatpic2
             // 
-            pictureBox10.Location = new Point(674, 344);
-            pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(46, 41);
-            pictureBox10.TabIndex = 17;
-            pictureBox10.TabStop = false;
+            skillMatpic2.Location = new Point(642, 344);
+            skillMatpic2.Name = "skillMatpic2";
+            skillMatpic2.Size = new Size(80, 80);
+            skillMatpic2.TabIndex = 17;
+            skillMatpic2.TabStop = false;
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(1146, 359);
+            label8.Location = new Point(1178, 368);
             label8.Name = "label8";
             label8.Size = new Size(51, 30);
             label8.TabIndex = 32;
@@ -325,7 +325,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.Location = new Point(1146, 498);
+            label10.Location = new Point(1178, 478);
             label10.Name = "label10";
             label10.Size = new Size(51, 30);
             label10.TabIndex = 31;
@@ -335,7 +335,7 @@
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label11.Location = new Point(1028, 498);
+            label11.Location = new Point(1035, 478);
             label11.Name = "label11";
             label11.Size = new Size(51, 30);
             label11.TabIndex = 30;
@@ -345,7 +345,7 @@
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label12.Location = new Point(1026, 359);
+            label12.Location = new Point(1035, 368);
             label12.Name = "label12";
             label12.Size = new Size(51, 30);
             label12.TabIndex = 29;
@@ -353,33 +353,33 @@
             // 
             // pictureBox11
             // 
-            pictureBox11.Location = new Point(1090, 488);
+            pictureBox11.Location = new Point(1092, 448);
             pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(50, 40);
+            pictureBox11.Size = new Size(80, 80);
             pictureBox11.TabIndex = 28;
             pictureBox11.TabStop = false;
             // 
             // pictureBox12
             // 
-            pictureBox12.Location = new Point(1090, 348);
+            pictureBox12.Location = new Point(1092, 344);
             pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(53, 41);
+            pictureBox12.Size = new Size(80, 80);
             pictureBox12.TabIndex = 27;
             pictureBox12.TabStop = false;
             // 
             // pictureBox13
             // 
-            pictureBox13.Location = new Point(974, 488);
+            pictureBox13.Location = new Point(949, 448);
             pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(48, 40);
+            pictureBox13.Size = new Size(80, 80);
             pictureBox13.TabIndex = 26;
             pictureBox13.TabStop = false;
             // 
             // pictureBox14
             // 
-            pictureBox14.Location = new Point(974, 348);
+            pictureBox14.Location = new Point(949, 344);
             pictureBox14.Name = "pictureBox14";
-            pictureBox14.Size = new Size(46, 41);
+            pictureBox14.Size = new Size(80, 80);
             pictureBox14.TabIndex = 25;
             pictureBox14.TabStop = false;
             // 
@@ -395,9 +395,9 @@
             // 
             // FlowerTypePic
             // 
-            FlowerTypePic.Location = new Point(1034, 122);
+            FlowerTypePic.Location = new Point(997, 76);
             FlowerTypePic.Name = "FlowerTypePic";
-            FlowerTypePic.Size = new Size(100, 50);
+            FlowerTypePic.Size = new Size(165, 184);
             FlowerTypePic.TabIndex = 34;
             FlowerTypePic.TabStop = false;
             // 
@@ -420,18 +420,18 @@
             Controls.Add(label5);
             Controls.Add(label6);
             Controls.Add(label7);
-            Controls.Add(pictureBox7);
-            Controls.Add(pictureBox8);
-            Controls.Add(pictureBox9);
-            Controls.Add(pictureBox10);
+            Controls.Add(skillMatpic1);
+            Controls.Add(skillMatpic3);
+            Controls.Add(skillMatpic0);
+            Controls.Add(skillMatpic2);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(label9);
-            Controls.Add(pictureBox6);
-            Controls.Add(pictureBox5);
-            Controls.Add(pictureBox4);
-            Controls.Add(pictureBox3);
+            Controls.Add(AscensionMatPic2);
+            Controls.Add(AscensionMatPic4);
+            Controls.Add(AscensionMatPic1);
+            Controls.Add(AscensionMatPic3);
             Controls.Add(SkillMatLabel2);
             Controls.Add(SkillMatLabel1);
             Controls.Add(AscensionMatLabel);
@@ -448,14 +448,14 @@
             ((System.ComponentModel.ISupportInitialize)MatFormPic).EndInit();
             ((System.ComponentModel.ISupportInitialize)BossMatPic).EndInit();
             ((System.ComponentModel.ISupportInitialize)ClassMatPic).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)AscensionMatPic1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)AscensionMatPic2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)AscensionMatPic3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)AscensionMatPic4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)skillMatpic1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)skillMatpic3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)skillMatpic0).EndInit();
+            ((System.ComponentModel.ISupportInitialize)skillMatpic2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
@@ -476,10 +476,10 @@
         private Label AscensionMatLabel;
         private Label SkillMatLabel1;
         private Label SkillMatLabel2;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox6;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox5;
+        private PictureBox AscensionMatPic1;
+        private PictureBox AscensionMatPic2;
+        private PictureBox AscensionMatPic3;
+        private PictureBox AscensionMatPic4;
         private Label label9;
         private Label label1;
         private Label label2;
@@ -488,10 +488,10 @@
         private Label label5;
         private Label label6;
         private Label label7;
-        private PictureBox pictureBox7;
-        private PictureBox pictureBox8;
-        private PictureBox pictureBox9;
-        private PictureBox pictureBox10;
+        private PictureBox skillMatpic1;
+        private PictureBox skillMatpic3;
+        private PictureBox skillMatpic0;
+        private PictureBox skillMatpic2;
         private Label label8;
         private Label label10;
         private Label label11;

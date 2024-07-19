@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,9 +46,6 @@ namespace ChangliReborn.classes.MaterialForm
                 }
             }
 
-            AscensionMatLabel.Text = c.AscensionMat;
-            SkillMatLabel1.Text = c.AscensionMat;
-            SkillMatLabel2.Text = c.SkillMat;
             FlowerTypeLabel.Text = c.FlowerType + " x 60";
             foreach (KeyValuePair<string, Bitmap> kvp in matdic.FlowerMatDic)
             {
@@ -58,6 +56,39 @@ namespace ChangliReborn.classes.MaterialForm
                 }
             }
 
+            AscensionMatLabel.Text = c.AscensionMat;
+            foreach(KeyValuePair<string, string> kvp in matdic.NormalMatDic)
+            {
+                if (kvp.Key == c.AscensionMat)
+                {
+                    System.Console.WriteLine(kvp.Value);
+                    DirectoryInfo directory = new DirectoryInfo(kvp.Value);
+                    FileInfo[] fi = directory.GetFiles();
+                    AscensionMatPic1.Image = new Bitmap(fi[0].DirectoryName + "\\" + fi[0].Name);
+                    AscensionMatPic1.SizeMode = PictureBoxSizeMode.StretchImage;
+                    AscensionMatPic2.Image = new Bitmap(fi[1].DirectoryName + "\\" + fi[1].Name);
+                    AscensionMatPic2.SizeMode = PictureBoxSizeMode.StretchImage;
+                    AscensionMatPic3.Image = new Bitmap(fi[2].DirectoryName + "\\" + fi[2].Name);
+                    AscensionMatPic3.SizeMode = PictureBoxSizeMode.StretchImage;
+                    AscensionMatPic4.Image = new Bitmap(fi[3].DirectoryName + "\\" + fi[3].Name);
+                    AscensionMatPic4.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                    skillMatpic0.Image = new Bitmap(fi[0].DirectoryName + "\\" + fi[0].Name);
+                    skillMatpic0.SizeMode = PictureBoxSizeMode.StretchImage;
+                    skillMatpic1.Image = new Bitmap(fi[1].DirectoryName + "\\" + fi[1].Name);
+                    skillMatpic1.SizeMode = PictureBoxSizeMode.StretchImage;
+                    skillMatpic2.Image = new Bitmap(fi[2].DirectoryName + "\\" + fi[2].Name);
+                    skillMatpic2.SizeMode = PictureBoxSizeMode.StretchImage;
+                    skillMatpic3.Image = new Bitmap(fi[3].DirectoryName + "\\" + fi[3].Name);
+                    skillMatpic3.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+                else 
+                {
+                    System.Console.WriteLine("Failed");
+                }
+            }
+            SkillMatLabel1.Text = c.AscensionMat;
+            SkillMatLabel2.Text = c.SkillMat;
         }
 
         private void MaterialForm_Load(object sender, EventArgs e)
