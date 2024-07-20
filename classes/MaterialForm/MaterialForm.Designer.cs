@@ -444,7 +444,6 @@
             Name = "MaterialForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Materials";
-            Load += MaterialForm_Load;
             ((System.ComponentModel.ISupportInitialize)MatFormPic).EndInit();
             ((System.ComponentModel.ISupportInitialize)BossMatPic).EndInit();
             ((System.ComponentModel.ISupportInitialize)ClassMatPic).EndInit();

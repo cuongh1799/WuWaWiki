@@ -36,6 +36,7 @@
             MaterialPanel = new RichTextBox();
             addCharacterButton = new Button();
             sidebar = new FlowLayoutPanel();
+            RefreshButton = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             flowLayoutPanel1.SuspendLayout();
             sidebar.SuspendLayout();
@@ -45,9 +46,9 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.BackgroundImageLayout = ImageLayout.None;
-            pictureBox1.Location = new Point(347, 12);
+            pictureBox1.Location = new Point(404, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(789, 533);
+            pictureBox1.Size = new Size(732, 533);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -114,12 +115,23 @@
             sidebar.TabIndex = 8;
             sidebar.WrapContents = false;
             // 
+            // RefreshButton
+            // 
+            RefreshButton.Location = new Point(332, 12);
+            RefreshButton.Name = "RefreshButton";
+            RefreshButton.Size = new Size(66, 71);
+            RefreshButton.TabIndex = 9;
+            RefreshButton.Text = "Refresh";
+            RefreshButton.UseVisualStyleBackColor = true;
+            RefreshButton.Click += RefreshButton_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1140, 719);
+            Controls.Add(RefreshButton);
             Controls.Add(sidebar);
             Controls.Add(MaterialPanel);
             Controls.Add(flowLayoutPanel1);
@@ -145,5 +157,6 @@
         private Button addCharacterButton;
         private FlowLayoutPanel sidebar;
         public PictureBox pictureBox1;
+        private Button RefreshButton;
     }
 }
