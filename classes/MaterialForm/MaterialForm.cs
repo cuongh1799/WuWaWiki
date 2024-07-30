@@ -116,10 +116,5 @@ namespace ChangliReborn.classes.MaterialForm
                 }
             }
         }
-
-        private void MaterialForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -15,9 +15,11 @@ namespace ChangliReborn.classes.WuWaButton
         {
             this.Name = c.Name + "Button";
             this.charButton = c;
-            Width = 309;
+            Width = 362;
             Height = 80;
             this.Image = c.CharIcon;
+            this.FlatStyle = FlatStyle.Flat;
+            this.FlatAppearance.BorderSize = 0;
             if(this.Image == null)
             {
                 this.Text = c.Name;

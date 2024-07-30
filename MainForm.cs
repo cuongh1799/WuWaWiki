@@ -9,7 +9,7 @@ using ChangliReborn.classes.MaterialForm;
 namespace ChangliReborn
 {
     public partial class MainForm : Form
-    { 
+    {
         Character charCursor = new Character(); // use this save the current chosen char
         // Cache character list
         List<Character> CharacterList;
@@ -36,11 +36,11 @@ namespace ChangliReborn
                     character.CharBanner = new Bitmap(character.CharBannerURL);
                     character.CharIcon = new Bitmap(character.CharIconURL);
                 }
-                catch(Exception e) 
+                catch (Exception e)
                 {
                     System.Console.WriteLine(e.Message);
                     character.CharBanner = null;
-                    character.CharIcon =  null;
+                    character.CharIcon = null;
                 }
 
                 if (character != null)
@@ -53,7 +53,7 @@ namespace ChangliReborn
 
         private void LoadSidebar(List<Character> CharacterList)
         {
-            foreach(Character c in CharacterList)
+            foreach (Character c in CharacterList)
             {
                 WuWaButton w = new WuWaButton(c);
                 w.Click += WuWaButton_Click;
@@ -85,6 +85,16 @@ namespace ChangliReborn
         {
             pictureBox1.Image = (sender as WuWaButton).returnCharBanner();
             charCursor = (sender as WuWaButton).getCharButton();
+        }
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+            sidebar.Controls.Clear();
+            CharacterList.Clear();
+            CharacterList = LoadCharacter();
+            sidebar.Controls.Add(addCharacterButton);
+            LoadSidebar(CharacterList);
+            System.Console.WriteLine("Refreshed!");
         }
     }
 }
